@@ -24,8 +24,12 @@ export default function Contact() {
             setName('');
             setEmail('');
             setMessage('');
-        } catch (error) {
-            console.error('Error!', error.message);
+        } catch (error: unknown) {
+            if (error instanceof Error) {
+                console.error('Error!', error.message);
+            } else {
+                console.error('Unexpected error', error);
+            }
         }
     };
 
