@@ -25,7 +25,7 @@ export default function About() {
                 return (
                     <div>
                         <p>Software Engineer Intern, Tata Elxsi – Trivandrum, Kerala, India (January 2024 – June 2024)</p><br/>
-                        <p>Software Developer Intern, NATPAC & KSRTC – Kochi, Kerala, India (June 2023 – June 2024)</p><br/>
+                        <p>Software Developer Intern, NATPAC &amp; KSRTC – Kochi, Kerala, India (June 2023 – June 2024)</p><br/>
                         <p>PyBaMM Developer Intern, EEE Department of CUSAT – Kochi, Kerala, India (May 2023 – June 2023)</p>
                     </div>
                 );
@@ -49,7 +49,7 @@ export default function About() {
     <div className="w-full md:w-2/3 max-w-5xl md:pl-10 bg-black bg-opacity-30 p-6 rounded-lg shadow-lg">
         <h1 className="text-4xl text-center font-bold mb-4">About Me</h1>
         <p className="mb-4">
-            I'm a passionate developer with a strong foundation in both frontend and backend development, continually exploring the latest technologies in the tech industry. My enthusiasm for coding drives me to solve complex problems while embracing new challenges. With a focus on full-stack development and AI algorithms, I am committed to learning quickly and adapting to evolving landscapes. I aspire to excel in the tech industry, leveraging my skills and experiences to innovate and create impactful solutions.<br /><br />
+            I&apos;m a passionate developer with a strong foundation in both frontend and backend development, continually exploring the latest technologies in the tech industry. My enthusiasm for coding drives me to solve complex problems while embracing new challenges. With a focus on full-stack development and AI algorithms, I am committed to learning quickly and adapting to evolving landscapes. I aspire to excel in the tech industry, leveraging my skills and experiences to innovate and create impactful solutions.<br /><br />
         </p>
 
         <div className="flex gap-4 mb-4 justify-center">
