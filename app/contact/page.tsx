@@ -8,16 +8,16 @@ export default function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    
+
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyOiqQIH3z8gz_jE7STmRQKVo5d202k-3s9ZrjZlhoJJu8AuFUo6DTEJ5pVvdmobyxY/exec';
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
+
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', email);
         formData.append('message', message);
-        
+
         try {
             await fetch(scriptURL, { method: 'POST', body: formData });
             alert('Message sent successfully!');
@@ -78,7 +78,7 @@ export default function Contact() {
                             </div>
                             <button 
                                 type="submit" 
-                                className="bg-teal-500 text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-teal-600"
+                                className="bg-teal-500 text-white py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-teal-600 w-full md:w-auto"
                             >
                                 Send Message
                             </button>

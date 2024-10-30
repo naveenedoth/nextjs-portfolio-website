@@ -30,7 +30,7 @@ const projectsData: Project[] = [
     },
     {
         id: 2,
-        title: "Hostel Mess & Meal Share App ",
+        title: "Hostel Mess & Meal Share App",
         description: "Technologies used: Flutter, Firebase",
         details: (
             <ul>
@@ -62,13 +62,13 @@ export default function Projects() {
     return (
         <main className="bg-gray-500 min-h-screen flex flex-col text-white">
             <Navbar />
-            <div className="mt-48">
+            <div className="mt-10 md:mt-48">
                 <p className="mb-4 text-lg text-center">Click cards to see more details.</p>
-                <div className="flex-col md:flex-row justify-center items-center flex-grow p-8 grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+                <div className="flex-col md:flex-row justify-center items-center flex-grow p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
                     {projectsData.map(project => (
                         <div 
                             key={project.id} 
-                            className="bg-black bg-opacity-30 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between min-h-[150px]"
+                            className="bg-black bg-opacity-30 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between min-h-[150px] text-center"
                             onClick={() => handleCardClick(project)}
                         >
                             <h2 className="text-xl font-bold">{project.title}</h2><br />
@@ -82,7 +82,7 @@ export default function Projects() {
                     className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
                     onClick={() => setSelectedProject(null)}
                 >
-                    <div className="bg-white text-black p-8 rounded-lg w-1/2">
+                    <div className="bg-white text-black p-4 sm:p-8 rounded-lg w-4/5 sm:w-1/2">
                         <h2 className="text-2xl font-bold">{selectedProject.title}</h2><br />
                         {selectedProject.id === 3 ? (
                             <div>

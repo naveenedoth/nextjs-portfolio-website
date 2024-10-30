@@ -3,7 +3,7 @@ import Footer from './footer';
 
 export default function Page() {
     return (
-        <main className="bg-gray-500 h-screen flex flex-col text-white">
+        <main className="bg-gray-500 min-h-screen flex flex-col text-white">
             <Navbar />
             <div className="flex flex-col md:flex-row justify-around items-center flex-grow p-8">
 
