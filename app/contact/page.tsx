@@ -34,6 +34,8 @@ export default function Contact() {
     };
 
     return (
+        <>
+        <title>Contact Me - Naveen L S</title>
         <main className="bg-gray-500 min-h-screen flex flex-col text-white">
             <Navbar />
             <div className="flex flex-grow justify-center items-center p-8">
@@ -103,5 +105,6 @@ export default function Contact() {
             </div>
             <Footer />
         </main>
+        </>
     );
 }

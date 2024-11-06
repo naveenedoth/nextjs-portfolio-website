@@ -14,7 +14,7 @@ export default function About() {
                         <h2 className="text-lg font-bold mb-2">Languages:</h2>
                         <p className="mb-2">Python, C/C++, Java, JavaScript, TypeScript, SQL, HTML/CSS, Dart</p>
                         <h2 className="text-lg font-bold mb-2">Frameworks:</h2>
-                        <p className="mb-2">Flutter, React, Angular, Next.js, Django, Tailwind, Bootstrap, PyBaMM</p>
+                        <p className="mb-2">Flutter, React, Angular, Next.js, Spring Boot, Django, Tailwind, Bootstrap, PyBaMM</p>
                         <h2 className="text-lg font-bold mb-2">Security Tools:</h2>
                         <p className="mb-2">SELinux, AppArmor</p>
                         <h2 className="text-lg font-bold mb-2">Developer Tools:</h2>
@@ -43,6 +43,8 @@ export default function About() {
     };
 
     return (
+        <>
+        <title>About Me - Naveen L S</title>
         <main className="bg-gray-500 min-h-screen flex flex-col text-white">
             <Navbar />
             <div className="flex flex-col items-center p-4 sm:p-8">
@@ -79,5 +81,6 @@ export default function About() {
                 </div>
             </div>
         </main>
+        </>
     );
 }

@@ -60,6 +60,8 @@ export default function Projects() {
     };
 
     return (
+        <>
+        <title>Projects done by Naveen L S</title>
         <main className="bg-gray-500 min-h-screen flex flex-col text-white">
             <Navbar />
             <div className="mt-10 md:mt-48">
@@ -108,5 +110,6 @@ export default function Projects() {
                 </div>
             )}
         </main>
+        </>
     );
 }
