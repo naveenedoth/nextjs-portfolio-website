@@ -145,7 +145,6 @@ export default function Contact() {
                 </a>
               </p>
             </div>
-            
           </div>
         </div>
         <Footer />

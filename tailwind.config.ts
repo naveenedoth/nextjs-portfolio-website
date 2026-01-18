@@ -13,9 +13,9 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        roboto: ['Roboto', 'sans-serif'],
-        merriweather: ['Merriweather', 'serif'],
-        dancing: ['Dancing Script', 'cursive'],
+        roboto: ["Roboto", "sans-serif"],
+        merriweather: ["Merriweather", "serif"],
+        dancing: ["Dancing Script", "cursive"],
       },
     },
   },

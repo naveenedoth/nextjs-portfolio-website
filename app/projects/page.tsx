@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 
@@ -8,7 +8,7 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  details: JSX.Element | string;
+  details: ReactNode | string;
 }
 
 const projectsData: Project[] = [
@@ -40,7 +40,7 @@ const projectsData: Project[] = [
           • GitHub link:{" "}
           <Link
             href="https://github.com/naveenedoth/KYANITE"
-            className="text-blue-600 underline"
+            className="text-blue-600 underline hover:text-blue-800"
           >
             https://github.com/naveenedoth/KYANITE
           </Link>
@@ -79,7 +79,7 @@ const projectsData: Project[] = [
           • GitHub link:{" "}
           <Link
             href="https://github.com/shyamjp2002/Meal-Share-App"
-            className="text-blue-600 underline"
+            className="text-blue-600 underline hover:text-blue-800"
           >
             https://github.com/shyamjp2002/Meal-Share-App
           </Link>
@@ -139,7 +139,7 @@ export default function Projects() {
                     href={selectedProject.details as string}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+                    className="text-blue-600 underline hover:text-blue-800"
                   >
                     {selectedProject.description}
                   </a>
@@ -149,7 +149,7 @@ export default function Projects() {
               )}
               <br />
               <button
-                className="mt-4 px-4 py-2 bg-teal-500 text-white rounded"
+                className="mt-4 px-4 py-2 bg-teal-500 text-white rounded transition duration-300 ease-in-out hover:bg-teal-600 w-full md:w-auto"
                 onClick={() => setSelectedProject(null)}
               >
                 Close
