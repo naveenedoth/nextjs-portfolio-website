@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 
@@ -10,64 +9,108 @@ export default function About() {
     switch (activeTab) {
       case "Skills":
         return (
-          <div>
-            <h2 className="text-lg font-bold mb-2">Languages:</h2>
-            <p className="mb-2">
-              Java, JavaScript, TypeScript, Python, C, C++, SQL, HTML/CSS, Dart
-            </p>
-            <h2 className="text-lg font-bold mb-2">Frameworks:</h2>
-            <p className="mb-2">
-              React, Spring Boot, Angular, Next.js, Django, Flutter, Tailwind,
-              Bootstrap, PyBaMM
-            </p>
-            <h2 className="text-lg font-bold mb-2">Developer Tools:</h2>
-            <p className="mb-2">
-              Git, GitHub, GitLab, VS Code, IntelliJ, Spring Tool Suite,
-              Postman, DBeaver, Visual Studio, PyCharm
-            </p>
-            <h2 className="text-lg font-bold mb-2">DevOps & Quality Tools:</h2>
-            <p className="mb-2">Docker, Podman, SonarQube</p>
-            <h2 className="text-lg font-bold mb-2">Security Tools:</h2>
-            <p className="mb-2">SELinux, AppArmor</p>
+          <div className="space-y-5">
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-teal-300">
+                Languages
+              </h2>
+              <p className="leading-7 text-slate-300">
+                Java, JavaScript, TypeScript, Python, C, C++, SQL, HTML/CSS,
+                Dart
+              </p>
+            </div>
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-teal-300">
+                Frameworks
+              </h2>
+              <p className="leading-7 text-slate-300">
+                React, Spring Boot, Angular, Next.js, Django, Flutter, Tailwind,
+                Bootstrap, PyBaMM
+              </p>
+            </div>
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-teal-300">
+                Developer Tools
+              </h2>
+              <p className="leading-7 text-slate-300">
+                Git, GitHub, GitLab, VS Code, IntelliJ, Spring Tool Suite,
+                Postman, DBeaver, Visual Studio, PyCharm
+              </p>
+            </div>
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-teal-300">
+                DevOps & Quality Tools
+              </h2>
+              <p className="leading-7 text-slate-300">
+                Docker, Podman, SonarQube
+              </p>
+            </div>
+            <div>
+              <h2 className="mb-2 text-sm font-semibold uppercase tracking-wider text-teal-300">
+                Security Tools
+              </h2>
+              <p className="leading-7 text-slate-300">SELinux, AppArmor</p>
+            </div>
           </div>
         );
+
       case "Experience":
         return (
-          <div>
-            <p>
+          <div className="space-y-6">
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
               Software Engineer, Tata Elxsi – Trivandrum, Kerala, India
-              (December 2024 – present)
+              <span className="block text-sm text-slate-500">
+                December 2024 – present
+              </span>
             </p>
-            <br />
-            <p>
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
               Software Engineer Intern, Tata Elxsi – Trivandrum, Kerala, India
-              (January 2024 – June 2024)
+              <span className="block text-sm text-slate-500">
+                January 2024 – June 2024
+              </span>
             </p>
-            <br />
-            <p>
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
               Software Developer Intern, NATPAC &amp; KSRTC – Kochi, Kerala,
-              India (June 2023 – June 2024)
+              India
+              <span className="block text-sm text-slate-500">
+                June 2023 – June 2024
+              </span>
             </p>
-            <br />
-            <p>
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
               PyBaMM Developer Intern, EEE Department of CUSAT – Kochi, Kerala,
-              India (May 2023 – June 2023)
+              India
+              <span className="block text-sm text-slate-500">
+                May 2023 – June 2023
+              </span>
             </p>
           </div>
         );
+
       case "Education":
         return (
-          <div>
-            <p>
+          <div className="space-y-6">
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
               Cochin University of Science and Technology – B. Tech Information
-              Technology (CGPA 9.03) - 2024
+              Technology
+              <span className="block text-sm text-slate-500">
+                CGPA 9.03 · 2024
+              </span>
             </p>
-            <br />
-            <p>Govt. Model HSS, Kozhikode - Plus Two Kerala HSE (97%) - 2018</p>
-            <br />
-            <p>MSS Public School, Mavilikkadavu - Class X CBSE (92%) - 2016</p>
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
+              Govt. Model HSS, Kozhikode
+              <span className="block text-sm text-slate-500">
+                Plus Two Kerala HSE · 97% · 2018
+              </span>
+            </p>
+            <p className="border-l-2 border-teal-400 pl-4 leading-7 text-slate-300">
+              MSS Public School, Mavilikkadavu
+              <span className="block text-sm text-slate-500">
+                Class X CBSE · 92% · 2016
+              </span>
+            </p>
           </div>
         );
+
       default:
         return null;
     }
@@ -76,61 +119,53 @@ export default function About() {
   return (
     <>
       <title>About Me - Naveen L S</title>
-      <main className="bg-gray-500 min-h-screen flex flex-col text-white">
+      <main className="min-h-screen bg-slate-950 text-white">
         <Navbar />
-        <div className="flex flex-col items-center p-4 sm:p-8">
-          <div className="w-full md:w-2/3 max-w-5xl bg-black bg-opacity-30 p-6 rounded-lg shadow-lg">
-            <h1 className="text-3xl md:text-4xl text-center font-bold mb-4">
-              About Me
-            </h1>
-            <p className="mb-4">
-              I&apos;m a passionate developer with a strong foundation in both
-              frontend and backend development, continually exploring the latest
-              technologies in the tech industry. My enthusiasm for coding drives
-              me to solve complex problems while embracing new challenges. With
-              a focus on full-stack development and AI algorithms, I am
-              committed to learning quickly and adapting to evolving landscapes.
-              I aspire to excel in the tech industry, leveraging my skills and
-              experiences to innovate and create impactful solutions.
-              <br />
-              <br />
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-2 mb-4 justify-center">
-              <button
-                onClick={() => setActiveTab("Skills")}
-                className={`w-full sm:w-1/3 px-4 py-2 rounded ${
-                  activeTab === "Skills"
-                    ? "bg-teal-500 text-white"
-                    : "bg-gray-700 text-white"
-                } hover:bg-teal-500 hover:text-white hover-delay`}
-              >
-                Skills
-              </button>
-              <button
-                onClick={() => setActiveTab("Experience")}
-                className={`w-full sm:w-1/3 px-4 py-2 rounded ${
-                  activeTab === "Experience"
-                    ? "bg-teal-500 text-white"
-                    : "bg-gray-700 text-white"
-                } hover:bg-teal-500 hover:text-white hover-delay`}
-              >
-                Experience
-              </button>
-              <button
-                onClick={() => setActiveTab("Education")}
-                className={`w-full sm:w-1/3 px-4 py-2 rounded ${
-                  activeTab === "Education"
-                    ? "bg-teal-500 text-white"
-                    : "bg-gray-700 text-white"
-                } hover:bg-teal-500 hover:text-white hover-delay`}
-              >
-                Education
-              </button>
-            </div>
-
-            <div className="bg-gray-700 p-4 rounded shadow">
-              {renderContent()}
+        <div className="relative overflow-hidden px-4 py-12 sm:px-6 md:py-20">
+          <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-teal-500/10 blur-3xl" />
+          <div className="relative mx-auto w-full max-w-5xl">
+            <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 shadow-2xl backdrop-blur-xl sm:p-8 md:p-10">
+              <div className="mb-8 text-center">
+                <p className="mb-2 text-sm font-medium uppercase tracking-[0.25em] text-teal-400">
+                  Get to know me
+                </p>
+                <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+                  About{" "}
+                  <span className="bg-gradient-to-r from-teal-300 to-cyan-400 bg-clip-text text-transparent">
+                    Me
+                  </span>
+                </h1>
+                <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-gradient-to-r from-teal-400 to-cyan-400" />
+              </div>
+              <p className="mx-auto mb-9 max-w-4xl text-center text-sm leading-7 text-slate-300 sm:text-base">
+                I&apos;m a passionate developer with a strong foundation in both
+                frontend and backend development, continually exploring the
+                latest technologies in the tech industry. My enthusiasm for
+                coding drives me to solve complex problems while embracing new
+                challenges. With a focus on full-stack development and AI
+                algorithms, I am committed to learning quickly and adapting to
+                evolving landscapes. I aspire to excel in the tech industry,
+                leveraging my skills and experiences to innovate and create
+                impactful solutions.
+              </p>
+              <div className="mb-6 grid grid-cols-1 gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-2 sm:grid-cols-3">
+                {["Skills", "Experience", "Education"].map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-300 ${
+                      activeTab === tab
+                        ? "bg-gradient-to-r from-teal-500 to-cyan-500 text-white shadow-lg shadow-teal-500/20"
+                        : "text-slate-400 hover:bg-white/5 hover:text-white"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ))}
+              </div>
+              <div className="min-h-[280px] rounded-2xl border border-white/10 bg-slate-900/70 p-5 shadow-inner sm:p-7">
+                {renderContent()}
+              </div>
             </div>
           </div>
         </div>

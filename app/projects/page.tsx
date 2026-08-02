@@ -1,5 +1,4 @@
 "use client";
-
 import { ReactNode, useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -18,7 +17,7 @@ const projectsData: Project[] = [
     description:
       "Technologies used: HTML, CSS, JavaScript, Bootstrap, PHP, SQL",
     details: (
-      <ul>
+      <ul className="space-y-3 text-sm leading-6 text-slate-700">
         <li>
           • Developed an online platform for booking doctor appointments as an
           end-semester mini project
@@ -40,7 +39,9 @@ const projectsData: Project[] = [
           • GitHub link:{" "}
           <Link
             href="https://github.com/naveenedoth/KYANITE"
-            className="text-blue-600 underline hover:text-blue-800"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="break-all text-blue-600 underline hover:text-blue-800"
           >
             https://github.com/naveenedoth/KYANITE
           </Link>
@@ -53,7 +54,7 @@ const projectsData: Project[] = [
     title: "Hostel Mess & Meal Share App",
     description: "Technologies used: Flutter, Firebase",
     details: (
-      <ul>
+      <ul className="space-y-3 text-sm leading-6 text-slate-700">
         <li>
           • Developed a mobile application for hostel mess management and food
           sharing as an end-semester mini project
@@ -79,7 +80,9 @@ const projectsData: Project[] = [
           • GitHub link:{" "}
           <Link
             href="https://github.com/shyamjp2002/Meal-Share-App"
-            className="text-blue-600 underline hover:text-blue-800"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="break-all text-blue-600 underline hover:text-blue-800"
           >
             https://github.com/shyamjp2002/Meal-Share-App
           </Link>
@@ -105,34 +108,74 @@ export default function Projects() {
   return (
     <>
       <title>Projects done by Naveen L S</title>
-      <main className="bg-gray-500 min-h-screen flex flex-col text-white">
+
+      <main className="min-h-screen bg-slate-950 text-white">
         <Navbar />
-        <div className="mt-10 md:mt-48">
-          <p className="mb-4 text-lg text-center">
-            Click cards to see more details.
-          </p>
-          <div className="flex-col md:flex-row justify-center items-center flex-grow p-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
-            {projectsData.map((project) => (
-              <div
-                key={project.id}
-                className="bg-black bg-opacity-30 p-4 rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between min-h-[150px] text-center"
-                onClick={() => handleCardClick(project)}
-              >
-                <h2 className="text-xl font-bold">{project.title}</h2>
-                <br />
-                <div>{project.description}</div>
-              </div>
-            ))}
+
+        <div className="relative overflow-hidden px-4 py-12 sm:px-6 md:py-16">
+          <div className="pointer-events-none absolute left-1/2 top-0 h-80 w-80 -translate-x-1/2 rounded-full bg-teal-500/10 blur-3xl" />
+          <div className="relative mx-auto max-w-7xl">
+            <div className="mb-10 text-center">
+              <p className="mb-2 text-sm font-medium uppercase tracking-[0.25em] text-teal-400">
+                My work
+              </p>
+              <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+                Featured{" "}
+                <span className="bg-gradient-to-r from-teal-300 to-cyan-400 bg-clip-text text-transparent">
+                  Projects
+                </span>
+              </h1>
+              <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-400 sm:text-base">
+                Click on a project to explore more details.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {projectsData.map((project) => (
+                <div
+                  key={project.id}
+                  className="group flex min-h-[220px] cursor-pointer flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-teal-400/30 hover:bg-white/[0.07] hover:shadow-2xl hover:shadow-teal-500/10"
+                  onClick={() => handleCardClick(project)}
+                >
+                  <div>
+                    <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-teal-400/20 to-cyan-400/20 text-sm font-bold text-teal-300">
+                      0{project.id}
+                    </div>
+                    <h2 className="text-xl font-bold leading-snug text-white transition-colors duration-300 group-hover:text-teal-300">
+                      {project.title}
+                    </h2>
+                  </div>
+                  <div className="mt-8">
+                    <p className="text-sm leading-6 text-slate-400">
+                      {project.description}
+                    </p>
+                    <p className="mt-4 text-sm font-medium text-teal-400">
+                      View details →
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+
         {selectedProject && (
           <div
-            className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-sm"
             onClick={() => setSelectedProject(null)}
           >
-            <div className="bg-white text-black p-4 sm:p-8 rounded-lg w-4/5 sm:w-1/2">
-              <h2 className="text-2xl font-bold">{selectedProject.title}</h2>
-              <br />
+            <div
+              className="max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-3xl border border-white/10 bg-white p-6 text-black shadow-2xl sm:p-8"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="mb-6">
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-teal-600">
+                  Project 0{selectedProject.id}
+                </p>
+
+                <h2 className="text-2xl font-bold leading-tight sm:text-3xl">
+                  {selectedProject.title}
+                </h2>
+              </div>
               {selectedProject.id === 3 ? (
                 <div>
                   <a
@@ -147,9 +190,8 @@ export default function Projects() {
               ) : (
                 <div>{selectedProject.details}</div>
               )}
-              <br />
               <button
-                className="mt-4 px-4 py-2 bg-teal-500 text-white rounded transition duration-300 ease-in-out hover:bg-teal-600 w-full md:w-auto"
+                className="mt-8 w-full rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-teal-600 sm:w-auto"
                 onClick={() => setSelectedProject(null)}
               >
                 Close
